@@ -10,7 +10,7 @@ dependencies:
     - cabal update
     - cabal sandbox init
   override:
-    - cabal install --dependencies-only
+    - cabal install --dependencies-only --verbose=3 --ghc-options='-keep-tmp-files'
     - cabal build
   cache_directories:
     - .cabal-sandbox
